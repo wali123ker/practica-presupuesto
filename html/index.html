@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>Gestor de Gastos</title>
-
-     <link rel="stylesheet" href= "css/estilos.css" ></link>
-
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
-
 <body>
 
-    <h1>Gestor de Gastos</h1>
-    <div id="total-gastos"></div>
-    <hr>
-    <div id="formulario-gasto"></div>
-    <hr>
-    <div id="lista-gastos"></div>
+<h1>Gestor de gastos</h1>
 
-    <script src="./js/gestionPresupuesto.js"></script>
+<div id="total"></div>
 
-    <script src="./js/gestionPresupuestoWebV1.js"></script>
+<button id="btn-guardar">Guardar en almacenamiento</button>
+<button id="btn-cargar">Cargar desde almacenamiento</button>
+
+<div id="formulario-container"></div>
+<div id="listado-container"></div>
+
+<template id="template-gasto">
+    <div>
+        <div><strong>Descripción:</strong> <span class="desc"></span></div>
+        <div><strong>Valor:</strong> <span class="valor"></span> €</div>
+        <div><strong>Fecha:</strong> <span class="fecha"></span></div>
+        <div><strong>Etiquetas:</strong> <span class="etiquetas"></span></div>
+        <button class="btn-borrar">Borrar</button>
+    </div>
+</template>
+
+<script type="module" src="./js/gestionPresupuestoWebV2.js"></script>
+
+</body>
+</html>
 
     <style>
         body {
@@ -66,42 +77,3 @@
 
 <body>
 
-    <h1>Gestor de gastos</h1>
-
-    <div id="total"></div>
-
-<button id="btn-guardar">Guardar en almacenamiento</button>
-<button id="btn-cargar">Cargar desde almacenamiento</button>
-
-
-    <div id="formulario-container"></div>
-
-    <div id="listado-container"></div>
-
-    <template id="template-gasto">
-        <div class="gasto-box">
-            <div><strong>Descripción:</strong> <span class="desc"></span></div>
-            <div><strong>Valor:</strong> <span class="valor"></span> €</div>
-            <div><strong>Fecha:</strong> <span class="fecha"></span></div>
-            <div><strong>Etiquetas:</strong> <span class="etiquetas"></span></div>
-
-            <div class="botones">
-                <button class="btn-editar">Editar</button>
-                <button class="btn-borrar">Borrar</button>
-
-            <form class="form-editar" style="margin-top: 10px; display: none;">
-                <input type="text" name="descripcion" placeholder="Descripción"><br>
-                <input type="number" step="0.01" name="valor" placeholder="Valor"><br>
-                <input type="date" name="fecha"><br>
-                <input type="text" name="etiquetas" placeholder="etiquetas separadas por ,"><br>
-
-                <button type="submit">Guardar</button>
-                <button type="button" class="cancelar">Cancelar</button>
-            </form>
-        </div>
-    </template>
-
-    <script type="module" src="./js/gestionPresupuestoWebV2.js"></script>
-
-</body>
-</html>

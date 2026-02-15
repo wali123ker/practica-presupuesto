@@ -2,7 +2,7 @@
 import {assert, expect} from "chai";
 
 // Importar código de la aplicación sobre la que se realizarán los tests
-import {CrearGasto, anyadirGasto, filtrarGastos, agruparGastos} from '../js/gestionPresupuesto.js';
+import {CrearGasto, anyadirGasto, filtrarGastos, agruparGastos} from '../html/js/gestionPresupuesto.js';
 
 // Función CrearGasto y funcionamiento de objeto gasto
 describe("Función CrearGasto y funcionamiento de objeto gasto", function() {

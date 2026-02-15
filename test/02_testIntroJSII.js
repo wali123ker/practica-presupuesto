@@ -2,7 +2,7 @@
 import {assert} from "chai";
 
 // Importar código de la aplicación sobre la que se realizarán los tests
-import {actualizarPresupuesto, mostrarPresupuesto, CrearGasto, listarGastos, anyadirGasto, borrarGasto, calcularTotalGastos, calcularBalance} from '../js/gestionPresupuesto.js';
+import {actualizarPresupuesto, mostrarPresupuesto, CrearGasto, listarGastos, anyadirGasto, borrarGasto, calcularTotalGastos, calcularBalance} from '../html/js/gestionPresupuesto.js';
 
 // Inicialización de la variable global gastos y función listarGastos
 describe("Función listarGastos e inicialización de la variable global gastos", function() {
